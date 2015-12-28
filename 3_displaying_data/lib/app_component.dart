@@ -1,12 +1,11 @@
-// Copyright (c) 2015, <your name>. All rights reserved. Use of this source code
-// is governed by a BSD-style license that can be found in the LICENSE file.
-
 library angular2_developer_guides.app_component;
 
 import "package:angular2/angular2.dart";
 import "package:angular2_developer_guides/hero.dart";
 
 // Unlike TypeScript version, you must specify directives list (at least in current version).
+// TODO: Prefer to use @View instead?
+// TODO: Prefer to use templateUrl until at least WebStorm supports template in Dart file?
 @Component(
     selector: 'my-app',
     template: '''
