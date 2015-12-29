@@ -17,9 +17,7 @@ class TodoForm {
   @Output() EventEmitter<Todo> newTask = new EventEmitter<Todo>();
   String task = '';
   void addTodo() {
-    if (this.task.isNotEmpty) {
-      this.newTask.add(new Todo(this.task, false));
-    }
+    if (this.task.isNotEmpty) this.newTask.add(new Todo(this.task, false));
     this.task = '';
   }
 }
