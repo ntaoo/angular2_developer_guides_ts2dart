@@ -19,9 +19,8 @@ class TodoApp {
     new Todo('learn angular', true),
     new Todo('build an angular app', false),
   ];
-  int get remaining => this
-      .todos
-      .fold(0, (int count, Todo todo) => !todo.done ? count + 1 : count);
+  // Cleaner intention. Ref: https://github.com/aksharpatel47/angular.io/commit/d5235d502bc2e7d945cc8765d45bce9cd07f8e75
+  int get remaining => this.todos.where((todo) => !todo.done).length;
 
   void archive() {
     var oldTodos = this.todos;
